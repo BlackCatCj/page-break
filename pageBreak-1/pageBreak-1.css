@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+html,body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    text-align: center;
+    background: #dde1e7;
+}
+.container{
+background: #dde1e7;
+padding: 25px;
+/* 换行写必须加上 逗号(,) 否则会识别不了这行css */
+box-shadow: -3px -3px 7px #ffffff73,
+                3px 3px 5px rgba(94,104,121,0.288);
+}
+.pagination{
+    display: flex;
+    list-style: none;
+}
+.pagination>li{
+    flex: 1;
+    margin: 0 5px;
+    background: #dde1e7;
+    box-shadow: -3px -3px 7px #ffffff73,
+    3px 3px 5px rgba(94,104,121,0.288);
+}
+
+.pagination>li>a{
+    font-size: 18px;
+    text-decoration: none;
+    color: #4d3252;
+   width: 60px;
+   display: block;
+   line-height: 45px;
+
+}
+
+.pagination > li:first-child > a{
+width: 100px;
+}
+.pagination > li:last-child > a{
+    width: 100px;
+}
+/* 点击事件发生时，给li元素添加一个active样式 */
+/* .pagination>li.active必须要写上前面的指向，因为li的class已经定义过了，不这样指定，直接添加样式给li，会被覆盖掉 */
+.pagination>li.active{
+    box-shadow: inset -3px -3px 7px #ffffff73,
+        inset 3px 3px 5px rgba(94,104,121,0.288);
+}
+.pagination>li.active>a{
+    font-size: 17px;
+    color: #6f6cde;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分页栏</title>
+    <link rel="stylesheet" href="../pageBreak-1/pageBreak-1.css">
+    <!-- 通过网络导入jquery -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <ul class="pagination">
+            <li><a href="#">上一页</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">下一页</a></li>
+        </ul>
+    </div>
+
+
+    <script>
+        // 点击pagination样式的li孩子时触发函数，而对其他li元素不会有反应
+        $(".pagination>li").click(function () {
+            $(this).addClass("active").siblings().removeClass("active")
+        });
+    </script>
+
+</body>
+
+</html>
