@@ -29,6 +29,7 @@
 
     <script>
         // 点击pagination样式的li孩子时触发函数，而对其他li元素不会有反应
+        // 尽量不要有空格，有时候空格会导致识别不了
         $(".pagination>li").click(function () {
             $(this).addClass("active").siblings().removeClass("active")
         });
